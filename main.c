@@ -28,11 +28,11 @@ int main() {
   // draw_line(XRES-1, 0, 0, YRES/2, s, c);
   //
   // //octants 2 and 6
-  // c.red = 255;
-  // c.green = 0;
-  // c.blue = 0;
-  // draw_line(0, 0, XRES/2, YRES-1, s, c);
-  // draw_line(XRES-1, YRES-1, XRES/2, 0, s, c);
+  c.red = 255;
+  c.green = 0;
+  c.blue = 0;
+  draw_line(0, 0, XRES/2, YRES-1, s, c);
+  draw_line(XRES-1, YRES-1, XRES/2, 0, s, c);
   //
   // //octants 7 and 3
   // c.blue = 255;
