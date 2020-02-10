@@ -8,7 +8,7 @@
 //Insert your line algorithm here
 void draw_line(int x0, int y0, int x1, int y1, screen s, color c){
   int dy, dx, leftx, lefty, rightx, righty;
-  if(x0 == min(x0,x1)){
+  if(x0 <= x1){
     dx = x1 - x0;
     dy = y1 - y0;
     leftx = x0;
@@ -117,11 +117,4 @@ void draw_oct8(int x0, int y0, int x1, int y1, screen s, color c, int dx, int dy
     x++;
     d += 2*dy;
   }
-}
-
-int min(int first, int second){
-  if(first<second){
-    return first;
-  }
-  return second;
 }
