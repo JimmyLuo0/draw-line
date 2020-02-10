@@ -122,13 +122,6 @@ void draw_oct8(int x0, int y0, int x1, int y1, screen s, color c, int dx, int dy
   }
 }
 
-int max(int first, int second){
-  if(first>second){
-    return first;
-  }
-  return second;
-}
-
 int min(int first, int second){
   if(first<second){
     return first;

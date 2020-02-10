@@ -11,7 +11,6 @@ void draw_oct8(int, int, int, int, screen, color, int, int);
 void drawh(int x0, int y0, int x1, screen s, color c);
 void drawv(int x0, int y0, int y1, screen s, color c);
 
-int max(int, int);
 int min(int, int);
 
 #endif
