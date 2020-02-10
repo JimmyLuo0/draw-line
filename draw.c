@@ -26,6 +26,12 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c){
     rightx = x0;
     righty = y0;
   }
+  if(dy == 0){
+    drawh(leftx,lefty,rightx,s,c);
+  }
+  if(dx == 0){
+    drawv(leftx,lefty, lefty, s, c);
+  }
   if (dy <= dx && dy >= 0){
     draw_oct1(leftx, lefty, rightx, righty, s, c, dx, dy);
   }
@@ -37,6 +43,22 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c){
   }
   if(dx < -dy && dy < 0 ){
     draw_oct7(leftx, lefty, rightx, righty, s, c, dx, dy);
+  }
+}
+
+void drawh(int x0, int y0, int x1, screen s, color c){
+  int x = x0;
+  while(x <= x1){
+    plot(s,c,x,y0);
+    x++;
+  }
+}
+
+void drawv(int x0, int y0, int y1, screen s, color c){
+  int y = y0;
+  while(y <= y1){
+    plot(s,c,x0,y);
+    y++;
   }
 }
 
